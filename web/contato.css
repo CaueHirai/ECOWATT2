@@ -1,0 +1,359 @@
+/* ========================================
+   ECOWATT — PÁGINA DE CONTATO
+   Tema: Preto principal + detalhes verdes
+   ======================================== */
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIÁVEIS DE COR ===== */
+:root {
+  --preto: #000000;
+  --preto-suave: #1c1c1c;
+  --verde: #2e7d4f;
+  --verde-claro: #6ee07b;
+  --cinza-fundo: #f4f5f4;
+  --branco: #ffffff;
+  --texto: #1a1a1a;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: var(--cinza-fundo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+/* ===== MENU DE NAVEGAÇÃO ===== */
+.barra-topo {
+  background: var(--preto);
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid var(--verde);
+}
+
+.menu-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 6px 4px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--verde-claro);
+  transition: width 0.3s ease;
+}
+
+.menu-nav a:hover {
+  color: var(--verde-claro) !important;
+}
+
+.menu-nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO (CABEÇALHO PRINCIPAL) ===== */
+.hero {
+  background: linear-gradient(135deg, var(--preto) 0%, var(--preto-suave) 60%, #2a2a2a 100%);
+  color: var(--branco);
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid var(--verde);
+}
+
+.hero::before {
+  content: "✉️";
+  position: absolute;
+  font-size: 300px;
+  opacity: 0.06;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+
+.hero-conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(110, 224, 123, 0.12);
+  border: 1px solid rgba(110, 224, 123, 0.4);
+  color: #aef2b6;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.hero-subtitulo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #d7ffe0;
+  margin-bottom: 20px;
+}
+
+.hero-texto {
+  font-size: 17px;
+  color: #e8e8e8;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.secao {
+  margin-bottom: 70px;
+}
+
+/* ===== CABEÇALHO DA SEÇÃO (CENTRALIZADO) ===== */
+.secao-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #d6d6d6;
+  padding-bottom: 12px;
+}
+
+.secao-numero {
+  background: linear-gradient(135deg, var(--preto), #2a2a2a);
+  color: var(--verde-claro);
+  font-weight: bold;
+  font-size: 20px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+  border: 1px solid var(--verde);
+}
+
+.secao-cabecalho h2 {
+  font-size: 30px;
+  color: #111111;
+}
+
+/* ===== TEXTO DE INTRODUÇÃO (CENTRALIZADO) ===== */
+.secao-intro {
+  font-size: 17px;
+  color: #4a4a4a;
+  margin: 0 auto 30px auto;
+  max-width: 750px;
+  text-align: center;
+}
+
+/* ===== CARD DO FORMULÁRIO (CENTRALIZADO) ===== */
+.card-contato {
+  background: var(--branco);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid var(--preto);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.campo input,
+.campo textarea {
+  padding: 14px 16px;
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--texto);
+  background: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px rgba(110, 224, 123, 0.25);
+  background: var(--branco);
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ===== BOTÃO ENVIAR (CENTRALIZADO) ===== */
+.btn-enviar {
+  align-self: center;
+  background: var(--preto);
+  color: var(--verde-claro);
+  border: 2px solid var(--verde);
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background: var(--verde);
+  color: var(--branco);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(46, 125, 79, 0.35);
+}
+
+/* ===== SEÇÃO FINAL (CTA) ===== */
+.cta-final {
+  background: linear-gradient(135deg, var(--preto), var(--preto-suave));
+  color: var(--branco);
+  text-align: center;
+  padding: 60px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--verde);
+}
+
+.cta-final h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: var(--verde-claro);
+}
+
+.cta-final p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e8e8e8;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+  background: var(--preto);
+  color: #cccccc;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 2px solid var(--verde);
+}
+
+.rodape-logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--verde-claro);
+  margin-bottom: 8px;
+}
+
+.rodape p {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.rodape-desc {
+  color: #999999;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .barra-topo {
+    padding: 10px 20px;
+  }
+
+  .menu-nav {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-subtitulo {
+    font-size: 18px;
+  }
+
+  .secao-cabecalho h2 {
+    font-size: 24px;
+  }
+
+  .card-contato {
+    padding: 26px;
+  }
+
+  .cta-final h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 16px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .btn-enviar {
+    width: 100%;
+    text-align: center;
+  }
+}
