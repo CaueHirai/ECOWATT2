@@ -1,0 +1,417 @@
+/* ===== RESET E BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f4f5f4;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* ===== BARRA DE NAVEGAÇÃO ===== */
+.barra-topo {
+  background: #000000;
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #2e7d4f;
+}
+
+.menu-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 6px 4px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6ee07b;
+  transition: width 0.3s ease;
+}
+
+.menu-nav a:hover {
+  color: #6ee07b !important;
+}
+
+.menu-nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO / CABEÇALHO PRINCIPAL ===== */
+.hero {
+  background: linear-gradient(135deg, #000000 0%, #1c1c1c 60%, #2a2a2a 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid #2e7d4f;
+}
+
+.hero::before {
+  content: "⚡";
+  position: absolute;
+  font-size: 320px;
+  opacity: 0.06;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  color: #6ee07b;
+}
+
+.hero-conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(110, 224, 123, 0.12);
+  border: 1px solid rgba(110, 224, 123, 0.4);
+  color: #aef2b6;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.hero-subtitulo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #d7ffe0;
+  margin-bottom: 20px;
+}
+
+.hero-texto {
+  font-size: 17px;
+  color: #e8e8e8;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.secao {
+  margin-bottom: 70px;
+}
+
+/* Cabeçalho de cada seção */
+.secao-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #d6d6d6;
+  padding-bottom: 12px;
+}
+
+.secao-numero {
+  background: linear-gradient(135deg, #000000, #2a2a2a);
+  color: #6ee07b;
+  font-weight: bold;
+  font-size: 18px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+  border: 1px solid #2e7d4f;
+}
+
+.secao-cabecalho h2 {
+  font-size: 30px;
+  color: #111111;
+}
+
+.secao-intro {
+  font-size: 17px;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+  max-width: 750px;
+}
+
+/* ===== CARD DE TEXTO (Sobre o EcoWatt) ===== */
+.card-texto {
+  background: white;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #1a1a1a;
+}
+
+.card-texto p {
+  margin-bottom: 16px;
+  font-size: 16.5px;
+  color: #333333;
+}
+
+.card-texto p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== OBJETIVOS ===== */
+.grid-objetivos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.card-objetivo {
+  background: white;
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid #1a1a1a;
+}
+
+.card-objetivo:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  border-top-color: #2e7d4f;
+}
+
+.icone-objetivo {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.card-objetivo p {
+  font-size: 16px;
+  color: #333333;
+}
+
+/* ===== NOSSA ESCOLA ===== */
+.card-escola {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #dddddd;
+  border-left: 6px solid #2e7d4f;
+}
+
+.card-escola-icone {
+  font-size: 70px;
+  flex-shrink: 0;
+}
+
+.card-escola p {
+  font-size: 17px;
+  color: #333333;
+}
+
+/* ===== EQUIPE ===== */
+.grid-equipe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.card-membro {
+  background: white;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.card-membro:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  border-bottom-color: #2e7d4f;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 18px;
+  background: linear-gradient(135deg, #2a2a2a, #000000);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  color: #6ee07b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 2px solid #2e7d4f;
+}
+
+.card-membro h3 {
+  font-size: 19px;
+  color: #111111;
+  margin-bottom: 6px;
+}
+
+.card-membro p {
+  font-size: 14px;
+  color: #777777;
+}
+
+/* ===== TECNOLOGIAS ===== */
+.grid-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.badge-tech {
+  background: white;
+  border: 2px solid #1a1a1a;
+  color: #111111;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.badge-tech:hover {
+  background: #000000;
+  color: #6ee07b;
+  border-color: #2e7d4f;
+  transform: translateY(-3px);
+}
+
+/* ===== SEÇÃO FINAL (CTA) ===== */
+.cta-final {
+  background: linear-gradient(135deg, #000000, #1c1c1c);
+  color: white;
+  text-align: center;
+  padding: 60px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2e7d4f;
+}
+
+.cta-final h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: #6ee07b;
+}
+
+.cta-final p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e8e8e8;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+  background: #000000;
+  color: #cccccc;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 2px solid #2e7d4f;
+}
+
+.rodape-logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #6ee07b;
+  margin-bottom: 8px;
+}
+
+.rodape p {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.rodape-desc {
+  color: #999999;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .barra-topo {
+    padding: 10px 20px;
+  }
+
+  .menu-nav {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-subtitulo {
+    font-size: 18px;
+  }
+
+  .secao-cabecalho h2 {
+    font-size: 24px;
+  }
+
+  .card-escola {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 22px;
+  }
+
+  .cta-final h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 16px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .card-texto,
+  .card-objetivo {
+    padding: 22px;
+  }
+}

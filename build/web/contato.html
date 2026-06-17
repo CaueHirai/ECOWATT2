@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="contato.css">
+  <title>Contato — EcoWatt</title>
+</head>
+<body>
+
+  <!-- ===== MENU DE NAVEGAÇÃO ===== -->
+  <header class="barra-topo">
+    <nav class="menu-nav">
+      <img src="img/logoEcoWatt.webp" alt="imagemLogo" width="75" height="75">
+      <span style="color: white; font-size: 35px; font-weight: bold; margin-right: auto; margin-left: 15px; font-family: Gill Sans Extrabold, sans-serif;">EcoWatt</span>
+      <a style="color: white;" href="index.html">Mapa</a>
+      <a style="color: white;" href="informacoes.html">Informações</a>
+      <a style="color: white;" href="sobre.html">Sobre nós</a>
+      <a style="color: white;" href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <!-- ===== CABEÇALHO PRINCIPAL (HERO) ===== -->
+  <section class="hero">
+    <div class="hero-conteudo">
+      <span class="hero-tag">✉️ Fale Conosco • EcoWatt</span>
+      <h1>Contato</h1>
+      <p class="hero-subtitulo">Tem dúvidas, sugestões ou ideias? Entre em contato com a equipe.</p>
+      <p class="hero-texto">
+        Estamos abertos a sugestões da comunidade acadêmica do
+        <strong>IFSP — Câmpus Salto</strong>. Use o formulário abaixo para enviar
+        sua mensagem diretamente para a equipe do <strong>EcoWatt</strong>.
+      </p>
+    </div>
+  </section>
+
+  <main class="conteudo">
+
+    <!-- ===== FORMULÁRIO DE CONTATO ===== -->
+    <section class="secao">
+      <div class="secao-cabecalho">
+        <span class="secao-numero">✉</span>
+        <h2>Envie uma mensagem</h2>
+      </div>
+
+      <p class="secao-intro">
+        Preencha os campos abaixo. Ao enviar, sua mensagem será encaminhada para o
+        e-mail oficial do projeto: <strong>n.novaes@aluno.ifsp.edu.br</strong>.
+      </p>
+
+      <div class="card-contato">
+        <form class="form-contato" action="mailto:n.novaes@aluno.ifsp.edu.br" method="post" enctype="text/plain">
+
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="Nome" placeholder="Digite seu nome completo" required>
+          </div>
+
+          <div class="campo">
+            <label for="email">Seu e-mail</label>
+            <input type="email" id="email" name="Email" placeholder="exemplo@aluno.ifsp.edu.br" required>
+          </div>
+
+          <div class="campo">
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="Assunto" placeholder="Sobre o que deseja falar?" required>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="Mensagem" rows="6" placeholder="Escreva sua mensagem aqui..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-enviar">📤 Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== SEÇÃO FINAL (CTA) ===== -->
+    <section class="cta-final">
+      <h2>Vamos construir um futuro mais sustentável</h2>
+      <p>
+        Sua opinião é importante para nós. Juntos, podemos transformar dados em
+        consciência dentro do IFSP — Câmpus Salto.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="rodape">
+    <div class="rodape-logo">⚡ EcoWatt</div>
+    <p>IFSP — Câmpus Salto</p>
+    <p class="rodape-desc">Projeto acadêmico sobre consumo de energia elétrica e sustentabilidade.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mapa — EcoWatt</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="module" src="js/javascript.js"></script>     
+    </head>
+
+    <body>
+        <header class="barra-topo">
+    <nav class="menu-nav">
+      <img src="img/logoEcoWatt.webp" alt="imagemLogo" width="75" height="75">
+      <span style="color: white; font-size: 35px; font-weight: bold; margin-right: auto; margin-left: 15px; font-family: Gill Sans Extrabold, sans-serif;">EcoWatt</span>
+      <a style="color: white;" href="index.html">Mapa</a>
+      <a style="color: white;" href="informacoes.html">Informações</a>
+      <a style="color: white;" href="sobre.html">Sobre nós</a>
+      <a style="color: white;" href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+        <main class="conteudo-mapa">
+            <div class="desc-equipamento" id="descEquipamento" hidden>
+                
+            </div>
+            
+            <div class="mapa-container" id="mapa-container">
+                <img src="img/mapa.png" alt="Mapa" style="width:1000px">
+            </div>
+
+            <aside class="mapa-blocos" >
+                <ul>
+                    <li>
+                        <input type="button" value="Bloco A" id="blocoA" onclick="mudarBloco('mapa1.png', [6, 7, 8, 9, 10], this)">
+                        <div class="equipamentos"></div>
+                    </li>
+                    <li>
+                        <input type="button" value="Bloco B" id="blocoB" onclick="mudarBloco('mapa2.png', [11, 12, 13, 14, 15], this)">
+                        <div class="equipamentos"></div>
+                    </li>
+                    <li>
+                        <input type="button" value="Bloco C" id="blocoC" onclick="mudarBloco('mapa3.png', [16, 17, 18, 19, 20], this)">
+                        <div class="equipamentos"></div>
+                    </li>
+                    <li>
+                        <input type="button" value="Bloco D" id="blocoD" onclick="mudarBloco('mapa4.png', [21, 22, 23, 24, 25], this)">
+                        <div class="equipamentos"></div>
+                    </li>
+                    <li>
+                        <input type="button" value="Estacionamento" id="estacionamento" onclick="mudarBloco('mapa5.png', [21, 22, 23, 24, 25], this)">
+                        <div class="equipamentos"></div>
+                    </li>
+                </ul>
+            </aside>
+        </main>
+    </body>
+</html> 

@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  background-color: black;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: black;
+  color: #1a1a1a;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.barra-topo {
+  background: #000000;
+  padding: 10px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #2e7d4f;
+}
+
+.menu-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 6px 4px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.menu-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6ee07b;
+  transition: width 0.3s ease;
+}
+
+.menu-nav a:hover {
+  color: #6ee07b !important;
+}
+
+.menu-nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO / CABEÇALHO PRINCIPAL ===== */
+.hero {
+  background: linear-gradient(135deg, #000000 0%, #1c1c1c 60%, #2a2a2a 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid #2e7d4f;
+}
+
+.hero::before {
+  content: "⚡";
+  position: absolute;
+  font-size: 320px;
+  opacity: 0.06;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  color: #6ee07b;
+}
+
+.hero-conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(110, 224, 123, 0.12);
+  border: 1px solid rgba(110, 224, 123, 0.4);
+  color: #aef2b6;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.hero-subtitulo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #d7ffe0;
+  margin-bottom: 20px;
+}
+
+.hero-texto {
+  font-size: 17px;
+  color: #e8e8e8;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+
+.conteudo-mapa {
+  display: flex;         
+  align-items: flex-start;
+  gap: 20px;             
+  padding: 40px;
+  justify-content: center;
+  background-color: black;
+}
+
+.mapa-container img {
+    width: 400px;
+  /*max-width: 100%;*/
+}
+.mapa-blocos {
+  color: white;
+  min-width: 250px;
+  max-width: 250px;
+}
+
+.mapa-blocos ul {
+  list-style: none; /* Remove as bolinhas da lista */
+}
+
+.mapa-blocos input[type="button"] {
+  background: none;
+  border: none;
+  padding: 0;
+  color: white;
+  font: inherit; /* Herda a fonte do projeto */
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.mapa-blocos input[type="button"]:hover {
+  color: #6ee07b; /* Verde claro do tema */
+  text-decoration: underline;
+}
+
+.conteudo-mapa .mapa-container {
+    width: 100%;
+    height: 600px;     /* Ajuste para a altura que preferir */
+    overflow: hidden;  /* Impede que a imagem transborde */
+    position: relative;
+}
+
+/* 2. FORÇA qualquer imagem que estiver ali dentro a ocupar 100% do espaço */
+.mapa-container img, 
+.mapa-imagem {
+        border: 2px solid #2e7d4f;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 15px rgba(110, 224, 123, 0.15),
+        0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 700px;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;     /* Centraliza a imagem caso sobre espaço nas laterais */
+}
+
+/* ===== LISTA DE EQUIPAMENTOS ===== */
+
+.equipamentos {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 2px solid #2e7d4f;
+}
+
+.equipamentos input[type="button"] {
+    display: block;
+    width: 100%;
+
+    margin: 6px 0;
+    padding: 10px 12px;
+
+    background: #111;
+    border: 1px solid #2e7d4f;
+    border-radius: 8px;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.equipamentos input[type="button"]:hover {
+    background: #1b1b1b;
+    border-color: #6ee07b;
+    color: #6ee07b;
+
+    transform: translateX(4px);
+}
+
+.equipamentos input[type="button"]:active {
+    transform: translateX(2px);
+}
+
+/* ===== PAINEL DO EQUIPAMENTO ===== */
+
+.desc-equipamento {
+    width: 350px;
+    min-height: 300px;
+
+    background: #111;
+    color: white;
+
+    border: none;
+    border-radius: 16px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255,255,255,0.03);
+
+    position: sticky;
+    top: 110px;
+}
+
+.desc-equipamento img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+    border: none;
+}
+
+.desc-equipamento h2 {
+    color: #6ee07b;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.desc-equipamento p {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.desc-equipamento b {
+    color: #aef2b6;
+}
+
+.desc-equipamento {
+    animation: aparecerEquipamento 0.3s ease;
+}
+
+@keyframes aparecerEquipamento {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#consumo,
+#custo {
+    color: #6ee07b;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Input de horas */
+
+#horasInput, #qtde {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    width: 100%;
+
+    margin-top: 8px;
+    padding: 12px 14px;
+
+    background: #1a1a1a;
+    color: white;
+
+    border: 1px solid #333;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+#horasInput:focus, #qtde:focus {
+    border-color: #6ee07b;
+
+    box-shadow:
+        0 0 0 3px rgba(110,224,123,0.15);
+}
+
+/* Remove as setinhas feias no Chrome */
+
+#horasInput::-webkit-inner-spin-button,
+#horasInput::-webkit-outer-spin-button,
+#qtde::-webkit-inner-spin-button,
+#qtde::-webkit-outer-spin-button{
+    opacity: 1;
+}
+
+.info-box {
+    background: #1a1a1a;
+
+    border-radius: 12px;
+
+    padding: 15px;
+    margin-bottom: 12px;
+}
+
+.info-box span {
+    display: block;
+    color: #bcbcbc;
+    font-size: 13px;
+}
+
+.info-box strong {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 28px;
+    color: #6ee07b;
+}
+
+.info-box small {
+    color: #999;
+}
